@@ -3,7 +3,7 @@ OBJ_FILES := $(addprefix obj/,$(notdir $(CPP_FILES:.cpp=.o)))
 # LD_FLAGS := ...
 CC_FLAGS := -MMD -g -Wall -Wextra -pthread -std=c++11
 
-main: $(OBJ_FILES)
+basic-db: $(OBJ_FILES)
 	g++ -o $@ $^
   #  g++ $(LD_FLAGS) -o $@ $^
 

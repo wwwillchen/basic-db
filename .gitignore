@@ -1,5 +1,5 @@
 /obj
-/out/basic-db
+/basic-db
 .vscode/
 /.vscode/**
 .vscode/*.*
