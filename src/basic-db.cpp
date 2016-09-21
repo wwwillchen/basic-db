@@ -1,8 +1,20 @@
-#include <iostream>
+#include "basic-db.h"
 
-int main(int argc, char* argv[])
-{
-    std::cout << "hi" << std::endl;
-    // Animal animal;
-    // std::cout << "age" << animal.age();
+#include <string>
+#include <unordered_map>
+
+#include "status-codes.h"
+
+StatusCodes BasicDB::set(std::string key, std::string value) {
+  StatusCodes status;
+  auto result = map_.find(key);
+  if (result != map_.end()) {
+    status = StatusCodes::Error;
+  } else {
+    status = StatusCodes::Success;
+  }
+  map_[key] = value;
+  return status;
 }
+
+std::string BasicDB::get(std::string key) { return map_[key]; }

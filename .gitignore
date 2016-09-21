@@ -1,4 +1,4 @@
-/obj
+/obj/*.*
 /basic-db
 .vscode/
 /.vscode/**
